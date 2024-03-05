@@ -19,8 +19,15 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .sidebar-Item:hover {
     background-color: #2F5050;
+}
+
+@media screen and (max-width:700px) {
+    .sidebar-Item {
+        font-size: 10px;
+    }
 }
