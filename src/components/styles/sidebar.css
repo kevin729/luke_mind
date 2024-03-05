@@ -31,3 +31,9 @@ ul {
         font-size: 10px;
     }
 }
+
+@media screen and (max-height:700px) {
+    .sidebar-Item {
+        height: 50px;
+    }
+}
