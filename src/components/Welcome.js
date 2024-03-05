@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Introduction from "./Introduction";
+import Learning from "./Learning";
 
 class Welcome extends Component {
     constructor(props) {
@@ -12,6 +13,7 @@ class Welcome extends Component {
             <div>
                 <h1>Welcome { this.state.isLoggedIn ? this.state.username : 'Guest' }</h1>
                 <Introduction />
+                <Learning />
             </div>
         )
     }

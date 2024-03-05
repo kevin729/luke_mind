@@ -13,7 +13,7 @@ const Products = () => {
                     </div>
 
                     <img className="CNNImg" src={cnn}/>
-                    <p className="projectDescription">A neural network capable of detecting patterns</p>
+                    <p className="projectDescription">A neural network capable of detecting patterns send via an android app</p>
                 </div>
             </div>
         </div>
