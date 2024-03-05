@@ -1,38 +1,45 @@
 .App {
-  text-align: center;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  height:100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inline-block {
+  display: inline-block;
+  vertical-align: top;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#root {
+  height:100%;
 }
 
-.App-link {
-  color: #61dafb;
+.cv {
+  width:100%;
+  height: 600px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.CNNImg {
+  width:200px;
+  height:auto;
+}
+
+.drawdroidImg {
+  width:200px;
+  height:400px;
+}
+
+.profile-picture {
+  width:200px;
+  height:auto;
+}
+
+.contact-header {
+  text-align: left;
+  width:100px;
+}
+
+.contact-detail {
+  width:100px;
 }
