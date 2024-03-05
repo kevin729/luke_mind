@@ -3,7 +3,7 @@ import cv from './docs/cv.pdf'
 
 const CV = () => { return (
         <div>
-            <h2>My CV</h2>
+            <h2 className="pageHeading">My CV</h2>
             
 
             <object data={cv} className="cv">

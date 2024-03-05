@@ -11,7 +11,7 @@ class Welcome extends Component {
     render() {
         return (
             <div>
-                <h1>Welcome { this.state.isLoggedIn ? this.state.username : 'Guest' }</h1>
+                <h1 className="pageHeading">Welcome { this.state.isLoggedIn ? this.state.username : 'Guest' }</h1>
                 <Introduction />
                 <Learning />
             </div>

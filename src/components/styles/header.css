@@ -64,3 +64,15 @@
     height:auto;
     float: left;
   }
+
+  .head-wrapper {
+    width:100%;
+    height:20%;
+  }
+
+  @media screen and (max-height:700px) {
+    .head-wrapper {
+      width:100%;
+      height:40%;
+    }
+  }

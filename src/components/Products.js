@@ -5,7 +5,7 @@ import drawdroid from "./images/drawdroid.jpg"
 const Products = () => {
     return (
         <div>
-            <h1>My Products</h1>
+            <h1 className="pageHeading">My Products</h1>
             <div>
                 <div class="inline-block">
                     <div className="projectTitle">
