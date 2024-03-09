@@ -49,13 +49,58 @@ html, body {
 .cert {
   width:600px;
   height:auto;
+  
+}
+
+.cert-none {
+  display: none;
+}
+
+.cert-invisible {
+  animation: fadeOut 0.5s;
+}
+
+.cert-show {
+  display: inline-block;
+  animation: fadeIn 0.5s;
+}
+
+.cert-invisible-prev {
+  animation: fadeOutPrev 0.5s;
+}
+
+.cert-show-prev {
+  display: inline-block;
+  animation: fadeInPrev 0.5s;
 }
 
 .contact-detail * {
   float: right;
 }
 
+@keyframes fadeOut {
+  0% { opacity: 1; transform: translateX(0);}
+  50% { opacity: 0.01; transform: translateX(-5%);}
+  100% { opacity: 0; transform: translateX(-10%);}
+}
 
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateX(10%);}
+  50% { opacity: 0.01; transform: translateX(5%);}
+  100% { opacity: 1; transform: translateX(0);}
+}
+
+@keyframes fadeOutPrev {
+  0% { opacity: 1; transform: translateX(0);}
+  50% { opacity: 0.01; transform: translateX(5%);}
+  100% { opacity: 0; transform: translateX(10%);}
+}
+
+@keyframes fadeInPrev {
+  0% { opacity: 0; transform: translateX(-10%);}
+  50% { opacity: 0.01; transform: translateX(-5%);}
+  100% { opacity: 1; transform: translateX(0);}
+}
 
 @media screen and (max-width:700px) {
   .cert {
