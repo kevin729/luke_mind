@@ -33,7 +33,7 @@ function next() {
         index = 0
     }
 
-    update(false, false)
+    update(false)
 }
 
 function prev() {
@@ -45,7 +45,7 @@ function prev() {
         index = slideImages.length-1
     }
 
-    update(false, true)
+    update(true)
 }
 
 function showSlide(cert, prev) {
@@ -71,34 +71,35 @@ function clearSlide(oldCert, newCert, prev) {
     })
 }
 
-function update(start, prev) {
+function update(prev) {
     clearInterval(timer)
-    timer = setInterval(next, 3000)
+    timer = setInterval(next, 5000)
 
     let certs = document.getElementsByClassName("cert")
 
     for (let i = 0; i < certs.length; i++) {
-        if (start) {
-            showSlide(certs[index])
-        } else if (i == prevIndex) {
+        if (i == prevIndex) {
             clearSlide(certs[prevIndex], certs[index], prev)
         }
     }
 }
-
 const Learning = () => {
     return (        
         <div>
             {
                 useEffect(() => {
-                    update(true)
+                    timer = setInterval(next, 5000)
                 })
             }
             <div>
                 {
-                    slideImages.map((val, key) => (
-                        <img key={key} className="cert cert-none" src={val.image} />
-                    ))
+                    slideImages.map((val, key) => {
+                        if (key == 0) {
+                            return <img key={key} className="cert" src={val.image} />
+                        } else {
+                            return <img key={key} className="cert cert-none" src={val.image} />
+                        }
+                    })
                 }      
             </div>
             
