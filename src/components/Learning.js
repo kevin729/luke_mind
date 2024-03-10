@@ -23,9 +23,15 @@ const slideImages = [
     },
 ]
 
-var timer
+var timer = setInterval(next, 5000)
+var callback
 
 function next() {
+    if (animating) {
+        callback = next;
+        return
+    }
+
     prevIndex = index;
     if (index < slideImages.length-1) {
         index++
@@ -37,6 +43,11 @@ function next() {
 }
 
 function prev() {
+    if (animating) {
+        callback = prev;
+        return
+    }
+
     prevIndex = index;
     if (index > 0) {
         index--
@@ -55,9 +66,18 @@ function showSlide(cert, prev) {
         cert.className = 'cert cert-show'
     }
     
+    cert.addEventListener('animationend', function eventHandlier(e) { 
+        animating = false;
+        if (callback) {
+            callback()
+            callback = null;
+        }
+        cert.removeEventListener('animationend', eventHandlier)
+    })
 }
 
 function clearSlide(oldCert, newCert, prev) {
+    animating = true;
     if (prev) {
         oldCert.className = 'cert cert-invisible-prev'
     } else {
@@ -71,26 +91,22 @@ function clearSlide(oldCert, newCert, prev) {
     })
 }
 
-function update(prev) {
+var animating = false;
+function update(prev, callback) {
     clearInterval(timer)
     timer = setInterval(next, 5000)
 
     let certs = document.getElementsByClassName("cert")
-
     for (let i = 0; i < certs.length; i++) {
         if (i == prevIndex) {
             clearSlide(certs[prevIndex], certs[index], prev)
         }
     }
 }
+
 const Learning = () => {
     return (        
         <div>
-            {
-                useEffect(() => {
-                    timer = setInterval(next, 5000)
-                })
-            }
             <div>
                 {
                     slideImages.map((val, key) => {
