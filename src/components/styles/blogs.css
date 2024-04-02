@@ -9,3 +9,11 @@
         padding: 0;
     }
 }
+
+@media screen and (max-height: 700px) {
+    .blog-wrapper {
+        margin-top: 50px;
+        background-color: #3a3e5e;
+        padding: 20px;
+    }
+}
