@@ -11,17 +11,16 @@ const Sidebar = () => { return (
                         return (
                             <a href={val.link}>
                                 <li key={key} className="sidebar-Item">
-                                <div>
                                     <div>
-                                        { val['icon'] }
+                                        <div>
+                                            { val['icon'] }
+                                        </div>
+                                        <div>
+                                            { val['title'] }
+                                        </div>
                                     </div>
-                                    <div>
-                                        { val['title'] }
-                                    </div>
-                                </div>
-                            </li>
+                                </li>
                             </a>
-                            
                         )
                     })
                 }

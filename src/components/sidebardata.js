@@ -19,10 +19,5 @@ export const Sidebardata = [
         title:"Products",
         icon:<Code />,
         link: "/luke_mind/#/products"
-    },
-    {
-        title:"Profile",
-        icon:<Person />,
-        link: "/luke_mind/#/profile"
     }
 ]

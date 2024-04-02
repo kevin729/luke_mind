@@ -1,25 +1,57 @@
 import React from "react";
 import './styles/header.css'
-import { ViewAgenda } from "@mui/icons-material";
-import banner from "./images/banner.jpeg"
+import { HeadingLeftData } from "./headingleftdata";
+import { HeadingRightData } from "./headingrightdata";
 
 const Heading = () => {
     return (
-        <div className="head-wrapper" href={() => window.location.pathname = '/'}>
-            <div className="banner" />
+        <div className="head-wrapper">
             <header className="head-navbar">
                 <nav>
                     <div className="lefthead">
-
+                        <ul className="menu-list">
+                            {
+                                HeadingLeftData.map((val, key) => {
+                                    return (
+                                        <a key={key} href={val.link} className="menu-link">
+                                            <li className="menu-item">
+                                                <div>
+                                                    <div>
+                                                        {val.icon}
+                                                    </div>
+                                                    <div>
+                                                        {val.title}
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                    )
+                                })
+                            }
+                        </ul>
                     </div>
 
                     <div className="righthead">
                         <ul className="menu-list">
-                            <li className="menu-item">
-                                <div>
-
-                                </div>
-                            </li>
+                            {
+                                HeadingRightData.map((val, key) => {
+                                    return (
+                                        <a key={key} href={val.link} className="menu-link">
+                                            <li className="menu-item">
+                                                <div>
+                                                    <div>
+                                                        {val.icon}
+                                                    </div>
+                                                    <div>
+                                                        {val.title}
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                    )
+                                })
+                            }
+                            
                         </ul>
                     </div>
                 </nav>

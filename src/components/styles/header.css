@@ -6,6 +6,11 @@
     border-radius:20%;
   }
 
+  .menu-link {
+    height: 100%;
+    text-decoration: none;
+  }
+
   .menu-list {
     height: 100%;
     margin:0;
@@ -15,8 +20,18 @@
   }
   
   .menu-item {
+    width: 110px;
+    height: 100%;
     color:white;
-    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, serif;
+    text-decoration: none;
+  }
+
+  .menu-item:hover {
+    background-color: #2F5050;
   }
 
 
@@ -31,13 +46,13 @@
 
   .head-wrapper {
     width:100%;
-    height:20%;
+    height:70px;
+    position: fixed;
   }
   
   .head-navbar {
-    max-width: 100%;
     width:100%;
-    height:40%;
+    height:100%;
     background-color:#2F4050;
   }
   
@@ -47,14 +62,18 @@
   
   .lefthead {
     float:left;
-    width:70%;
+    width:50%;
     height:100%;
   }
   
   .righthead {
     float:right;
-    width:30%;
+    width:50%;
     height:100%;
+  }
+
+  .righthead ul {
+    float:right;
   }
   
   .canvas-logo {
@@ -65,14 +84,30 @@
     float: left;
   }
 
-  .head-wrapper {
-    width:100%;
-    height:20%;
+  @media screen and (max-width:900px) {
+    .head-wrapper {
+      height:60px;
+    }
+
+    .menu-item {
+      width: 100px;
+      height: 100%;
+      color:white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
-  @media screen and (max-height:700px) {
-    .head-wrapper {
-      width:100%;
-      height:40%;
+  @media screen and (max-width:700px) {
+    .menu-item {
+      width: 50px;
+      height: 100%;
+      color:white;
+      margin-right: 15px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }

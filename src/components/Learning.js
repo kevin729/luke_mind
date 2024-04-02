@@ -59,8 +59,8 @@ function prev() {
     update(true)
 }
 
-function showSlide(cert, prev) {
-    if (prev) {
+function showSlide(cert, prevDirection) {
+    if (prevDirection) {
         cert.className = 'cert cert-show-prev'
     } else {
         cert.className = 'cert cert-show'
@@ -76,9 +76,9 @@ function showSlide(cert, prev) {
     })
 }
 
-function clearSlide(oldCert, newCert, prev) {
+function clearSlide(oldCert, newCert, prevDirection) {
     animating = true;
-    if (prev) {
+    if (prevDirection) {
         oldCert.className = 'cert cert-invisible-prev'
     } else {
         oldCert.className = 'cert cert-invisible'
@@ -86,20 +86,20 @@ function clearSlide(oldCert, newCert, prev) {
     
     oldCert.addEventListener('animationend', function eventHandlier(e) { 
         oldCert.className = 'cert cert-none' 
-        showSlide(newCert, prev)
+        showSlide(newCert, prevDirection)
         oldCert.removeEventListener('animationend', eventHandlier)
     })
 }
 
 var animating = false;
-function update(prev, callback) {
+function update(prevDirection, callback) {
     clearInterval(timer)
     timer = setInterval(next, 5000)
 
     let certs = document.getElementsByClassName("cert")
     for (let i = 0; i < certs.length; i++) {
         if (i == prevIndex) {
-            clearSlide(certs[prevIndex], certs[index], prev)
+            clearSlide(certs[prevIndex], certs[index], prevDirection)
         }
     }
 }

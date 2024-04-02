@@ -1,12 +1,26 @@
 .main-body {
-    padding:0 5%;
-    background-color: #3d3d3d;
+    margin: 0;
     width: 80%;
-    height:80%;
+    height: 70%;
+    padding: 10% 10%;
+    background-color: #3d3d3d;
     color:white;
     text-align: center;
+
 }
 
 .introduction {
     text-align: justify;
+    font-size: 25px;
+    font-family: Georgia, serif;
+}
+
+@media screen and (max-width:1200px) {
+    .introduction {
+        font-size: 14px;
+      }
+
+      .main-body {
+        padding: 20% 10%;
+    }
 }
