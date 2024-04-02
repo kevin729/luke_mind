@@ -4,7 +4,7 @@ export const Blogdata = [
     {
         title: "Developers Log",
         heading: "A journal based on my work and projects",
-        text: "I am a software developer with 4 years work experience. My knowledge in computing excelled during my placement year in 2018, where I worked on a ERP system for engineers who install and repair starlifts. Luckly, I had already experimented with JavaEE and tomcat, so I already had an understanding of serlvets and JSPs, but their system of using a single servlet per app to read the xml to call the scripts to run the business logic and the view to display by matching url path allowed me to understand how server logic can be implemented in different ways. I learned running calling soap endpoints, groovy scripts for extracting entity data, creating and calling services from the server using both forms as well as ajax calls, and frontend and backend validation.",
+        text: "I am a software developer with 4 years work experience. My knowledge in computing excelled during my placement year in 2018, where I worked on a ERP system for engineers who install and repair starlifts. Luckly, I had already experimented with JavaEE and tomcat, so I already had an understanding of serlvets and JSPs, but their system of using a single servlet per app to read the xml to call the scripts to run the business logic and the view to display by matching url path allowed me to understand how server logic can be implemented in different ways. I learned how to call soap endpoints, write groovy scripts for extracting entity data, creating and calling services from the server using both forms as well as ajax calls, and frontend and backend validation.",
         section: [
             {
                 title: "Fonts",
