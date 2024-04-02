@@ -9,7 +9,7 @@ export const Blogdata = [
             {
                 title: "Fonts",
                 heading: "01/04/2024",
-                text: "On my eportfolio, I have added the fonts, Georgia, serif and 'Times New Roman', serif. Times new roman looks more professional, however can be hard to read in a small font, therefore it is better to use this font for either small sentances or pages with big text. Georgia seems to be better suited for both UI text and single paragraphs like an introduction text.",
+                text: "On my eportfolio, I have added the fonts, Georgia, serif and 'Times New Roman', serif. Times new roman looks more professional, however can be hard to read in a small font, therefore it is better to use this font for either small sentances or pages with big text. Georgia seems to be better suited for both UI text and single paragraphs like an introduction text. I also later found that for contact details, a simple plain font works better, so I also used Arial, Helvetica, sans-serif on the profile page.",
             },
             // {
             //     title: "Certificate Slider",
